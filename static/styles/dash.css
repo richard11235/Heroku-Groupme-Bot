@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    }
+     
+    *:focus {
+    outline: none;
+    }
+    body {
+    font-family: Arial;
+    background-color: white;
+    padding: 50px;
+    }
+
+    .btn {
+        border: 2px solid transparent;
+        background: #3498DB;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 25px;
+        text-decoration: none;
+        text-shadow: none;
+        border-radius: 3px;
+        box-shadow: none;
+        transition: 0.25s;
+        display: block;
+        width: 125px;
+        }
+         
+    .btn:hover {
+    background-color: #2980B9;
+    }
+
+    /*SIDEBAR CSS*/
+    .sidenav {
+        height: 90%;
+        width: 4.5cm;
+        position: fixed;
+        z-index: 1;
+        top: 6em;
+        left: 0;
+        background-color: #3498DB;
+        overflow-x: hidden;
+        padding-top: 20px;
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 125%;
+        color: #ffffff;
+        display: block
+    }
+
+    .sidenav a:hover {
+        background-color: #2980B9;
+    }
+
+    .header {
+        height: 10%;
+        position: fixed;
+        top: 0;
+        left: 1px;
+        right: 1px;
+        margin-top: 0%;
+        text-align: center;
+        border: 5px solid purple;
+        border-radius: 5px;
+        padding-top: 0;
+        background-color: white;
+        
+    }
+
+    .main {
+        margin-left: 4cm;
+        margin-top: 3cm;
+        padding: 0px 10px;
+    }
+
+    .inline {
+        float: left;
+    }
+
+    .logout {
+        float: right;
+        margin-top: 50px;
+    }
+
+    .control-group {
+    margin-bottom: 10px;
+    }
+
+    .request {
+    width: 300px;
+    }

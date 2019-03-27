@@ -1,0 +1,45 @@
+<link rel='stylesheet' href="static/styles/style.css" type="text/css">
+{% block body %}
+{% if session['logged_in'] %}
+ 
+You're logged in already!
+ 
+{% else %}
+<form action="/send-request" method="POST">
+<div class="register">
+    <div class="register-screen">
+        <div class="app-title">
+            <h1>Register</h1>
+        </div>
+        <div class="register-form">
+            <div class="control-group">
+                <input type="text" class="register-field" value="" placeholder="Email" name="email">
+                <label class="register-field-icon fui-user" for="register-name"></label>
+            </div>
+            <div class="control-group">
+                <input type="text" class="register-field" value="" placeholder="Username" name="username">
+                <label class="register-field-icon fui-user" for="register-name"></label>
+            </div>
+            <div class="control-group">
+                <input type="password" class='register-field' value="" placeholder="Password" name="password">
+                <label class="register-field-icon fui-lock" for="register-pass"></label>
+            </div>
+            <div class="control-group">
+                <input type="password" class='register-field' value="" placeholder="Confirm password" name="confirm-password">
+                <label class="register-field-icon fui-lock" for="register-pass"></label>
+            </div>
+            <input type="submit" value="Register" class="btn btn-primary btn-large btn-block">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class='error'>
+                            <h5>{{message}}</h5>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</div>
+</form>{% endif %}
+{% endblock %}
