@@ -68,19 +68,18 @@ def webhook():
   # We don't want to reply to ourselves!
   if data['sender_type'] == 'bot':
     return "ok", 300
-  if data['name'] != 'Bruce Flachsbart':
-    if data['text'] in last:
-      return "ok", 300
-    msg = process(data['text'])
-    if msg == None:
-      return "ok", 400
-    #if last in str(msg):
-    #  return "ok", 300
-    f = open('.lastmsg','w+')
-    f.write(str(msg))
-    f.close()
-    GID = data['group_id']
-    send_message(msg,GID)
+  if data['text'] in last:
+    return "ok", 300
+  msg = process(data['text'])
+  if msg == None:
+    return "ok", 400
+  #if last in str(msg):
+  #  return "ok", 300
+  f = open('.lastmsg','w+')
+  f.write(str(msg))
+  f.close()
+  GID = data['group_id']
+  send_message(msg,GID)
   return "ok", 200
 
 def get_cat_fact():
