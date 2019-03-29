@@ -20,6 +20,14 @@ We appreciate the candid feedback, and the passion the class has put forth aroun
 
 Our team will continue to make changes and monitor class feedback and update everyone as soon and as often as we can."""
 
+BEEG_YOSHI  """⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠴⢿⣧⣤⣄⠀⠀
+⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣷⡀⠀
+⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⣴⣿⣿⠀⠀⠀
+⢀⣀⡀⣾⡿⠀⠉⠉⠛⠋⠛⠛⠚⣿⣿⣿⣿⣿⣿⣷⣄
+⢿⣷⣾⣿⣿⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣷
+⠀⠀⠻⠿⠟⠁⠑⢶⣤⣴⣿⣿⣿⣷⣶⣬⣿⣿⣿⡿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⢿⡿⠟⠀⠀⠀"""
+
 def send_message(msg,GID):
   if type(msg) == str:
     msg = [msg]
@@ -54,6 +62,9 @@ def process(text):
 
   if 'CAT' in text and 'FACT' in text:
     return get_cat_fact()
+
+  if 'BEEG'in text and 'YOSHI' in text:
+    return BEEG_YOSHI
 
 @app.route('/API', methods=['POST'])
 def webhook():
