@@ -20,7 +20,7 @@ We appreciate the candid feedback, and the passion the class has put forth aroun
 
 Our team will continue to make changes and monitor class feedback and update everyone as soon and as often as we can."""
 
-BEEG_YOSHI  """⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠴⢿⣧⣤⣄⠀⠀
+BEEG_YOSHI = """⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠴⢿⣧⣤⣄⠀⠀
 ⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣷⡀⠀
 ⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⣴⣿⣿⠀⠀⠀
 ⢀⣀⡀⣾⡿⠀⠉⠉⠛⠋⠛⠛⠚⣿⣿⣿⣿⣿⣿⣷⣄
@@ -57,7 +57,7 @@ def process(text):
   #tks = text.split(' ')
  
   if 'WHY' in text or 'HARD' in text:
-    if 'HOMEWORK' in text:
+    if 'HOMEWORK' in text or 'TEST' in text:
       return  THE_INTENT
 
   if 'CAT' in text and 'FACT' in text:
