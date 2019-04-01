@@ -31,14 +31,14 @@
     <h1>Bots</h1>
     <h2>Approved Bots</h2>
     {% for bot in session['approved-bots'] %}
-        <h4 style="padding: .5em">{{ bot['bot_id'] }}</h4>
+        <p style="padding: .5em">{{ bot['bot_id'] }}</p>
         <form action="/delete-bot?id={{ bot['bot_id'] }}" method="POST">
             <input type="submit" value="DELETE" style="width: 80px" class="btn btn-primary btn-large btn-block" style="float: left">
         </form>
     {% endfor %}
     <h2>Unapproved Bots</h2>
     {% for bot in session['unapproved-bots'] %}
-        <h4>{{ bot['bot_id'] }}</h4>
+        <p style="padding: .5em">{{ bot['bot_id'] }}</p>
         <form action="/cancel-bot?id={{ bot['bot_id'] }}" method="POST">
             <input type="submit" value="CANCEL" style="width: 80px" class="btn btn-primary btn-large btn-block">
         </form>
