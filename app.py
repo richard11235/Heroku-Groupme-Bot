@@ -14,7 +14,7 @@ from flask import Flask, request, Blueprint, flash, g, redirect, render_template
 
 THE_INTENT="""The intent is to provide students with a sense of pride and accomplishment for unlocking different answers.
 
-As for points, we selected initial values based upon data from the Open Beta and other adjustments made to milestone rewards before launch. Among other things, we're looking at average per-student credit earn rates on a daily basis, and we'll be making constant adjustments to ensure that students have challenges that are compelling, rewarding, and of course attainable via homework.
+As for points, we selected initial values based upon data from the Open Beta and other adjustments made to milestone rewards before launch. Among other things, we're looking at average per-student point earn rates on a daily basis, and we'll be making constant adjustments to ensure that students have challenges that are compelling, rewarding, and of course attainable via homework.
 
 We appreciate the candid feedback, and the passion the class has put forth around the current topics here on GroupMe, our forums and across numerous social media outlets.
 

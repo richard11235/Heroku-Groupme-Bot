@@ -32,10 +32,20 @@
     <h2>Approved Bots</h2>
     {% for bot in session['approved-bots'] %}
         <h4>{{ bot['bot_id'] }}</h4>
+        <form action="/delete-bot?id={{ bot['bot_id'] }}" method="POST">
+            <div class="logout">
+                <input type="submit" value="Log Out" class="btn btn-primary btn-large btn-block">
+            </div>
+        </form>
     {% endfor %}
     <h2>Unapproved Bots</h2>
     {% for bot in session['unapproved-bots'] %}
         <h4>{{ bot['bot_id'] }}</h4>
+        <form action="/cancel-bot?id={{ bot['bot_id'] }}" method="POST">
+            <div class="logout">
+                <input type="submit" value="Log Out" class="btn btn-primary btn-large btn-block">
+            </div>
+        </form>
     {% endfor %}
     {% elif session['page'] == 'request-bot' %}
     <h1>Request Bot</h1>
@@ -63,6 +73,7 @@
     <h4>Feel free to put in suggestions for different things you want to see with this bot and website!</h4>
     {% elif session['page'] == 'contact' %}
     <h1>Contact information</h1>
+    <p>I can be reached by email at <a href=mailto:flachsbot@gmail.com>flachsbot@gmail.com</a></p>
     {% elif session['page'] == 'account' %}
     <h1>Account details</h1>
     {% elif session['page'] == 'requests' %}
